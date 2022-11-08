@@ -3,16 +3,9 @@ name: Artifacts
 on: 
     push:
        branches:["main"]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      name: Checkout
-      run: touch hellow.txt
-      name: Upload a Build Artifact
-      uses: actions/upload
-    artifact@v3.1.1
-      with:
-        name: Primeiro Artifact
-        path: ./
-        retention-day: 1
+       jobs:
+        build:
+          runs-on: ubuntu-latest
+          steps:
+             name: Checkout
+              run: touch hellow.txt
